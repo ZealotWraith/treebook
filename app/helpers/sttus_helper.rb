@@ -1,0 +1,2 @@
+module SttusHelper
+end

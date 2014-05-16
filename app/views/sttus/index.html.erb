@@ -1,0 +1,27 @@
+<h1>Listing sttus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sttus.each do |sttu| %>
+      <tr>
+        <td><%= sttu.name %></td>
+        <td><%= sttu.content %></td>
+        <td><%= link_to 'Show', sttu %></td>
+        <td><%= link_to 'Edit', edit_sttu_path(sttu) %></td>
+        <td><%= link_to 'Destroy', sttu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sttu', new_sttu_path %>
